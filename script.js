@@ -2,7 +2,7 @@ var wins = 0;
 var losses = 0;
 var ties = 0;
 
-// var computerOptions = ["R", "P", "S"];
+var computerOptions = ["R", "P", "S"];
 
 // startGame();
 
@@ -26,8 +26,23 @@ var ties = 0;
 //     displayStats();
 //   }
 // }
+
 displayStats()
 function displayStats() {
+    var msg = "Stats: \nWins: " + wins + "\nLosses: " + losses + "\nTies: " + ties ;
+  alert(msg);
+}
+playAgain();
+
+function playAgain() {
+    if (confirm("Would you like to play again?") == true) {
+        startGame();
+    } else {
+        finalStats()
+    }
+}
+// 
+function finalStats() {
     var msg = "Stats: \nWins: " + wins + "\nLosses: " + losses + "\nTies: " + ties ;
   alert(msg);
 }
